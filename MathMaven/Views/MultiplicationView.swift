@@ -20,11 +20,14 @@ struct MultiplicationView: View {
     
     @State var answerCorrect = false
     
+    var correctResponse: Int {
+        return firstValue * secondValue
+    }
+    
     // MARK: Computed properties
     var body: some View {
         VStack {
-            Text("Multiplication")
-            Text(Operation.multiplication.rawValue)
+//            Text(Operation.multiplication.rawValue)
         }
         .font(Font.custom("SF Pro", size: 64))
     }
